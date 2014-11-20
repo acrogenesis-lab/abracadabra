@@ -220,7 +220,7 @@ $(function() {
         if(link.data("buttonless") == true) {
           buttons = "";
         } else {
-          buttons = "<input type=\"submit\" class=\"button abracadabra-submit\"><i class=\"" + abracadabraSubmitIcon + "\"></i></input><input type=\"button\" class=\"button secondary abracadabra-cancel\"><i class=\"" + abracadabraCancelIcon + "\"></i></input>";
+          buttons = "<li><button type=\"submit\" class=\"button tiny success abracadabra-submit\"><i class=\"" + abracadabraSubmitIcon + "\"></i></button></li><li><button type=\"button\" class=\"button tiny abracadabra-cancel\"><i class=\"" + abracadabraCancelIcon + "\"></i></button></li>";
         }
         /* /Show buttons? */
 
@@ -234,8 +234,8 @@ $(function() {
         input = "<input type=\"text\" class=\"form-control abracadabra-input\" id=\"" + inputId + "\" name=\"" + inputName + "\" value=\"" + inputValue + "\" data-original-value=\"" + inputValue + "\"" + tabToNextSelector + submitOnBlur + ">";
 
         html = "<span class=\"abracadabra-container\">" + openFormTag + hiddenMethodTags;
-        html += "<div class=\"control-group\"><div class=\"abracadabra-input-and-button-wrapper\"><div class=\"abracadabra-input-container\">" + input + deletable + "</div>";
-        html += "<div class=\"abracadabra-buttons\">" + buttons + "</div></div></form></span>";
+        html += "<div class=\"row collapse\"><div class=\"small-12 columns\">" + input + deletable + "</div>";
+        html += "<div class=\"small-12 columns\"><ul class=\"button-group\">" + buttons + "</ul></div></form></span>";
 
         link.after(html);
         link.siblings(".abracadabra-container").find(".abracadabra-input").focus().val("").val(inputValue);
