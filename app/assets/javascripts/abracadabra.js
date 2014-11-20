@@ -18,7 +18,7 @@ $(function() {
           container.siblings(".abracadabra").remove();
         } else {
           if(valueChanged == true) {
-            value = container.find(".abracadabra-input").val();        
+            value = container.find(".abracadabra-input").val();
           } else {
             value = container.find(".abracadabra-input").data("original-value");
           }
@@ -220,7 +220,7 @@ $(function() {
         if(link.data("buttonless") == true) {
           buttons = "";
         } else {
-          buttons = "<button type=\"submit\" class=\"btn btn-primary abracadabra-submit\"><i class=\"" + abracadabraSubmitIcon + "\"></i></button><button type=\"button\" class=\"btn abracadabra-cancel\"><i class=\"" + abracadabraCancelIcon + "\"></i></button>";
+          buttons = "<input type=\"submit\" class=\"button abracadabra-submit\"><i class=\"" + abracadabraSubmitIcon + "\"></i></input><input type=\"button\" class=\"button secondary abracadabra-cancel\"><i class=\"" + abracadabraCancelIcon + "\"></i></input>";
         }
         /* /Show buttons? */
 
@@ -232,7 +232,7 @@ $(function() {
         openFormTag = "<form accept-charset=\"UTF-8\" action=\"" + path + "\"" + remote + type + " class=\"form-inline abracadabra-form\" method=\"post\">";
         hiddenMethodTags = "<div style=\"display:none;\"><input name=\"utf8\" type=\"hidden\" value=\"&#10003;\"><input name=\"_method\" type=\"hidden\" value=\"" + formMethod + "\">" + authToken + "</div>";
         input = "<input type=\"text\" class=\"form-control abracadabra-input\" id=\"" + inputId + "\" name=\"" + inputName + "\" value=\"" + inputValue + "\" data-original-value=\"" + inputValue + "\"" + tabToNextSelector + submitOnBlur + ">";
-        
+
         html = "<span class=\"abracadabra-container\">" + openFormTag + hiddenMethodTags;
         html += "<div class=\"control-group\"><div class=\"abracadabra-input-and-button-wrapper\"><div class=\"abracadabra-input-container\">" + input + deletable + "</div>";
         html += "<div class=\"abracadabra-buttons\">" + buttons + "</div></div></form></span>";
